@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código Morse</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./assets/img/Logo_nb 1.svg" type="image/x-icon">
+    <script type="module" src="./src/main.js" defer></script>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <section class="resultado" id="resultadoCerto">
+            <p class="certo">ACERTOU!! Continue assim!</p>
+        </section>
+        <section class="resultado" id="resultadoErrado">
+            <p class="errado">Errou. Tente novamente</p>
+        </section>
+
+
+        <div class="modal">
+            <h2>Bem-vindo</h2>
+            <ul>
+                <li>Este jogo é um exercício para memorização do Código Morse</li>
+                <li>O jogo é bem simples, tenha consigo uma tabela de Código Morse em mãos para consulta.</li>
+                <li>Ao pressionar no ícone <a class="ph ph-play-circle"></a> o jogo começará.</li>
+                <li>Use os botões <a class="ph ph-dot-outline"></a> e <a class="ph ph-minus"></a> para adicionar os pontos e traços.</li>
+                <li>O botão <a class="ph ph-backspace"></a> apaga o ultimo caractere em caso de erro.</li>
+                <li>Ao pressionar no ícone <a class="ph ph-stop-circle"></a> o jogo resetará e mostrará os resultados.
+                </li>
+                <li>Ao pressionar no ícone <a class="ph ph-paper-plane-right"></a> sua resposta é enviada e contada.
+                </li>
+                <li>O objetivo é acertar o máximo de letras e números possíveis.</li>
+                <li>Este site será futuramente atualizado para novas funções.</li>
+                <li>Aproveite para aprender.</li>
+            </ul>
+
+        </div>
+
+        <button id="info">
+            <span class="sr-only">Ativar light mode</span>
+            <i class="ph-bold ph ph-info"></i>
+            <i class="ph-bold ph ph-x-circle"></i>
+        </button>
+
+        <button id="toggle-mode">
+            <span class="sr-only">Ativar light mode</span>
+            <i class="ph-bold ph-sun"></i>
+            <i class="ph-bold ph-moon"></i>
+        </button>
+
+        <section id="title">
+            Morse Game
+        </section>
+
+        <section id="game" class="flex">
+            <div id="morse"></div>
+            <div id="res"></div>
+            <section id="gamepad">
+                <span>
+                    <button class="ph ph-dot-outline" data-gamepad="ponto">
+                        <span class="sr-only">Ponto</span>
+                    </button>
+                    <button class="ph ph-minus" data-gamepad="traco">
+                        <span class="sr-only">Traço</span>
+                    </button>
+                </span>
+                <span>
+                    <button class="ph ph-backspace" data-gamepad="apagar">
+                        <span class="sr-only">Apagar</span>
+                    </button>
+                    <button class="ph ph-paper-plane-right" data-gamepad="Submit">
+                        <span class="sr-only">Enviar resposta</span>
+                    </button>
+                </span>
+
+            </section>
+        </section>
+
+        <section id="controls" class="flex">
+            <button class="ph ph-play-circle" data-action="Rungame">
+                <span class="sr-only">Começar jogo</span>
+            </button>
+            <button class="ph ph-stop-circle secondary" data-action="StopGame">
+                <span class="sr-only">Parar o jogo</span>
+            </button>
+            <button class="ph ph-speaker-none secondary" data-action="toggleMusic">
+                <span class="sr-only">Iniciar Música</span>
+            </button>
+            <button class="ph ph-speaker-high" data-action="toggleMusic">
+                <span class="sr-only">Parar Música</span>
+            </button>
+        </section>
+
+    </div>
+</body>
+
+</html>
