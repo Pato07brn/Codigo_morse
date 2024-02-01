@@ -2,7 +2,7 @@ import * as game from "./game.js";
 import * as btn from "./elements.js";
 import state from "./state.js";
 
-const bgMusic = new Audio('../../assets/sounds/bg-music.mp3')
+const bgMusic = new Audio('https://pato07brn.github.io/Codigo_morse/assets/sounds/bg-music.mp3')
 bgMusic.loop = true
 
 export function Rungame() {
